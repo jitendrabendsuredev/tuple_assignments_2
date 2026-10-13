@@ -1,0 +1,188 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Python Tuple: 20 Assignments</title><style>
+:root{--ink:#14302b;--dim:#4d6b62;--acc:#0b5d99;--line:#c7d6cf;--panel:#f3f6f4;--code:#10261f}
+*{box-sizing:border-box;margin:0}
+body{font:1.25rem/1.55 Georgia,serif;color:var(--ink);background:#fff;padding:3vh 4vw 6vh;max-width:1000px;margin:0 auto}
+h1{font-size:2.4rem;line-height:1.15;margin-bottom:.3em}
+.intro{background:var(--panel);border-left:6px solid var(--acc);padding:.8em 1.1em;margin:1em 0 1.6em}
+.intro li{margin-left:1.2em}
+h2{font-size:1.6rem;margin:1.8em 0 .6em;padding-bottom:.2em;border-bottom:3px solid var(--line);color:var(--acc)}
+.card{border:2px solid var(--line);border-radius:8px;padding:.9em 1.1em;margin-bottom:1.1em;break-inside:avoid}
+.card h3{font-size:1.3rem;margin-bottom:.3em}
+code{font-family:Consolas,"Courier New",monospace;background:var(--panel);padding:.05em .3em;border-radius:4px;font-size:.92em}
+pre{font-family:Consolas,"Courier New",monospace;font-size:1.05rem;line-height:1.5;background:var(--code);color:#e8f3ee;padding:.7em 1em;border-radius:6px;margin-top:.6em;white-space:pre-wrap;overflow-x:auto}
+pre.out{background:var(--panel);color:var(--ink);border:2px solid var(--line)}
+.lab{font-size:1rem;color:var(--dim);margin-top:.7em}
+.sbtn{font:inherit;font-size:1rem;margin-top:.8em;padding:.35em 1em;border:2px solid var(--acc);border-radius:6px;background:#fff;color:var(--acc);cursor:pointer}
+.sbtn:hover,.sbtn[aria-expanded="true"]{background:var(--acc);color:#fff}
+.sbtn:focus-visible{outline:3px solid #f0a000;outline-offset:2px}
+.top{margin:0 0 1em}
+pre.sol[hidden]{display:none}
+@media print{.sbtn,.top{display:none}pre.sol{display:none}body{font-size:11pt;padding:0}pre{font-size:10pt}}
+</style></head><body>
+<h1>Python Tuple: 20 Assignments</h1>
+<div class="intro"><b>Rules</b><ul><li>Write each answer in Python and run it.</li><li>Your output must match the sample output.</li><li>Do not use loops, if, or functions. You have not learned them yet.</li><li>Try the task yourself first. Open the solution only to check your answer.</li></ul></div>
+<div class="top"><button class="sbtn" id="all" aria-pressed="false">Show all solutions</button></div>
+<h2>Level 1: Create and read tuples</h2>
+<div class="card"><h3>1. Create a tuple</h3><p>Create a tuple named <code>colors</code> with three colors: "red", "green" and "blue". Print the tuple and its type.</p><div class="lab">Sample output</div><pre class="out">(&#x27;red&#x27;, &#x27;green&#x27;, &#x27;blue&#x27;)
+&lt;class &#x27;tuple&#x27;&gt;</pre>
+<button class="sbtn" aria-expanded="false" aria-controls="s1">Show solution</button><pre class="sol" id="s1" hidden>colors = (&quot;red&quot;, &quot;green&quot;, &quot;blue&quot;)
+print(colors)
+print(type(colors))</pre>
+</div>
+<div class="card"><h3>2. Your details</h3><p>Create a tuple named <code>me</code> with your name, your age and your city. Print it.</p><div class="lab">Sample output</div><pre class="out">(&#x27;Amit&#x27;, 21, &#x27;Pune&#x27;)</pre>
+<button class="sbtn" aria-expanded="false" aria-controls="s2">Show solution</button><pre class="sol" id="s2" hidden>me = (&quot;Amit&quot;, 21, &quot;Pune&quot;)
+print(me)</pre>
+</div>
+<div class="card"><h3>3. Length</h3><p>Create a tuple of these 5 numbers: 4, 8, 15, 16, 23. Print how many items it has.</p><div class="lab">Sample output</div><pre class="out">5</pre>
+<button class="sbtn" aria-expanded="false" aria-controls="s3">Show solution</button><pre class="sol" id="s3" hidden>nums = (4, 8, 15, 16, 23)
+print(len(nums))</pre>
+</div>
+<div class="card"><h3>4. Indexing</h3><p>Create <code>cities = ("Pune", "Mumbai", "Delhi", "Chennai", "Kolkata")</code>. Print the first city, the last city (use a negative index) and the third city.</p><div class="lab">Sample output</div><pre class="out">Pune
+Kolkata
+Delhi</pre>
+<button class="sbtn" aria-expanded="false" aria-controls="s4">Show solution</button><pre class="sol" id="s4" hidden>cities = (&quot;Pune&quot;, &quot;Mumbai&quot;, &quot;Delhi&quot;, &quot;Chennai&quot;, &quot;Kolkata&quot;)
+print(cities[0])
+print(cities[-1])
+print(cities[2])</pre>
+</div>
+<div class="card"><h3>5. Slicing</h3><p>Create a tuple of the 7 days: "Mon" to "Sun". Print the first 3 days, the last 2 days, and the days from "Tue" to "Fri".</p><div class="lab">Sample output</div><pre class="out">(&#x27;Mon&#x27;, &#x27;Tue&#x27;, &#x27;Wed&#x27;)
+(&#x27;Sat&#x27;, &#x27;Sun&#x27;)
+(&#x27;Tue&#x27;, &#x27;Wed&#x27;, &#x27;Thu&#x27;, &#x27;Fri&#x27;)</pre>
+<button class="sbtn" aria-expanded="false" aria-controls="s5">Show solution</button><pre class="sol" id="s5" hidden>days = (&quot;Mon&quot;, &quot;Tue&quot;, &quot;Wed&quot;, &quot;Thu&quot;, &quot;Fri&quot;, &quot;Sat&quot;, &quot;Sun&quot;)
+print(days[:3])
+print(days[-2:])
+print(days[1:5])</pre>
+</div>
+<div class="card"><h3>6. Step and reverse</h3><p>Create a tuple of the numbers 10, 20, 30 ... 80. Print every second item, then print the whole tuple in reverse order.</p><div class="lab">Sample output</div><pre class="out">(10, 30, 50, 70)
+(80, 70, 60, 50, 40, 30, 20, 10)</pre>
+<button class="sbtn" aria-expanded="false" aria-controls="s6">Show solution</button><pre class="sol" id="s6" hidden>nums = (10, 20, 30, 40, 50, 60, 70, 80)
+print(nums[::2])
+print(nums[::-1])</pre>
+</div>
+<div class="card"><h3>7. One-item tuple</h3><p>Create a tuple <code>t</code> that holds only the number 99. Print it and its type. Then print <code>type((99))</code> and write a comment explaining why the answer is different.</p><div class="lab">Sample output</div><pre class="out">(99,)
+&lt;class &#x27;tuple&#x27;&gt;
+&lt;class &#x27;int&#x27;&gt;</pre>
+<button class="sbtn" aria-expanded="false" aria-controls="s7">Show solution</button><pre class="sol" id="s7" hidden>t = (99,)
+print(t)
+print(type(t))
+print(type((99)))   # no comma, so it is only a number</pre>
+</div>
+<h2>Level 2: Functions, joining and checking</h2>
+<div class="card"><h3>8. count()</h3><p>Create <code>marks = (7, 3, 7, 9, 7, 3)</code>. Print how many times 7 appears and how many times 3 appears.</p><div class="lab">Sample output</div><pre class="out">3
+2</pre>
+<button class="sbtn" aria-expanded="false" aria-controls="s8">Show solution</button><pre class="sol" id="s8" hidden>marks = (7, 3, 7, 9, 7, 3)
+print(marks.count(7))
+print(marks.count(3))</pre>
+</div>
+<div class="card"><h3>9. index()</h3><p>Create <code>subjects = ("Python", "SQL", "Django", "HTML")</code>. Print the position of "Django" and the position of "HTML".</p><div class="lab">Sample output</div><pre class="out">2
+3</pre>
+<button class="sbtn" aria-expanded="false" aria-controls="s9">Show solution</button><pre class="sol" id="s9" hidden>subjects = (&quot;Python&quot;, &quot;SQL&quot;, &quot;Django&quot;, &quot;HTML&quot;)
+print(subjects.index(&quot;Django&quot;))
+print(subjects.index(&quot;HTML&quot;))</pre>
+</div>
+<div class="card"><h3>10. min, max and sum</h3><p>Create <code>prices = (250, 99, 400, 150, 75)</code>. Print the lowest price, the highest price and the total.</p><div class="lab">Sample output</div><pre class="out">Lowest: 75
+Highest: 400
+Total: 974</pre>
+<button class="sbtn" aria-expanded="false" aria-controls="s10">Show solution</button><pre class="sol" id="s10" hidden>prices = (250, 99, 400, 150, 75)
+print(&quot;Lowest:&quot;, min(prices))
+print(&quot;Highest:&quot;, max(prices))
+print(&quot;Total:&quot;, sum(prices))</pre>
+</div>
+<div class="card"><h3>11. Average</h3><p>Create <code>marks = (80, 70, 90, 60)</code>. Use <code>sum()</code> and <code>len()</code> to print the average.</p><div class="lab">Sample output</div><pre class="out">Average: 75.0</pre>
+<button class="sbtn" aria-expanded="false" aria-controls="s11">Show solution</button><pre class="sol" id="s11" hidden>marks = (80, 70, 90, 60)
+print(&quot;Average:&quot;, sum(marks) / len(marks))</pre>
+</div>
+<div class="card"><h3>12. Joining tuples</h3><p>Create <code>a = (1, 2, 3)</code> and <code>b = (4, 5, 6)</code>. Join them into a new tuple <code>c</code>. Print <code>c</code> and the number of items in it.</p><div class="lab">Sample output</div><pre class="out">(1, 2, 3, 4, 5, 6)
+6</pre>
+<button class="sbtn" aria-expanded="false" aria-controls="s12">Show solution</button><pre class="sol" id="s12" hidden>a = (1, 2, 3)
+b = (4, 5, 6)
+c = a + b
+print(c)
+print(len(c))</pre>
+</div>
+<div class="card"><h3>13. Repeating a tuple</h3><p>Use <code>*</code> to create a tuple of five zeros. Then print the tuple <code>("Hi",)</code> repeated 3 times.</p><div class="lab">Sample output</div><pre class="out">(0, 0, 0, 0, 0)
+(&#x27;Hi&#x27;, &#x27;Hi&#x27;, &#x27;Hi&#x27;)</pre>
+<button class="sbtn" aria-expanded="false" aria-controls="s13">Show solution</button><pre class="sol" id="s13" hidden>zeros = (0,) * 5
+print(zeros)
+print((&quot;Hi&quot;,) * 3)</pre>
+</div>
+<div class="card"><h3>14. Tuples cannot change</h3><p>Create <code>t = (1, 2, 3)</code>. Try to change the first item to 100. Run the program, read the error, and write the error message in a comment.</p><div class="lab">Sample output</div><pre class="out">TypeError: &#x27;tuple&#x27; object does not support item assignment</pre>
+<button class="sbtn" aria-expanded="false" aria-controls="s14">Show solution</button><pre class="sol" id="s14" hidden>t = (1, 2, 3)
+t[0] = 100   # TypeError: &#x27;tuple&#x27; object does not support item assignment</pre>
+</div>
+<div class="card"><h3>15. Is it in the tuple?</h3><p>Create <code>cities = ("Pune", "Mumbai", "Delhi")</code>. Print whether "Pune" is in it, and whether "Goa" is in it.</p><div class="lab">Sample output</div><pre class="out">True
+False</pre>
+<button class="sbtn" aria-expanded="false" aria-controls="s15">Show solution</button><pre class="sol" id="s15" hidden>cities = (&quot;Pune&quot;, &quot;Mumbai&quot;, &quot;Delhi&quot;)
+print(&quot;Pune&quot; in cities)
+print(&quot;Goa&quot; in cities)</pre>
+</div>
+<h2>Level 3: Unpacking and real tasks</h2>
+<div class="card"><h3>16. Unpacking</h3><p>Create <code>student = ("Riya", 19, "Mumbai")</code>. Unpack it into three variables <code>name</code>, <code>age</code> and <code>city</code> in one line. Print each on its own line.</p><div class="lab">Sample output</div><pre class="out">Riya
+19
+Mumbai</pre>
+<button class="sbtn" aria-expanded="false" aria-controls="s16">Show solution</button><pre class="sol" id="s16" hidden>student = (&quot;Riya&quot;, 19, &quot;Mumbai&quot;)
+name, age, city = student
+print(name)
+print(age)
+print(city)</pre>
+</div>
+<div class="card"><h3>17. Swap two values</h3><p>Set <code>x = 10</code> and <code>y = 20</code>. Swap them using tuple unpacking in one line. Print x and y.</p><div class="lab">Sample output</div><pre class="out">x = 20
+y = 10</pre>
+<button class="sbtn" aria-expanded="false" aria-controls="s17">Show solution</button><pre class="sol" id="s17" hidden>x, y = 10, 20
+x, y = y, x
+print(&quot;x =&quot;, x)
+print(&quot;y =&quot;, y)</pre>
+</div>
+<div class="card"><h3>18. Nested tuples</h3><p>Create <code>marks = ((80, 70), (60, 90), (75, 85))</code>. Print the second inner tuple, then the second item of the second inner tuple, then the first item of the third inner tuple.</p><div class="lab">Sample output</div><pre class="out">(60, 90)
+90
+75</pre>
+<button class="sbtn" aria-expanded="false" aria-controls="s18">Show solution</button><pre class="sol" id="s18" hidden>marks = ((80, 70), (60, 90), (75, 85))
+print(marks[1])
+print(marks[1][1])
+print(marks[2][0])</pre>
+</div>
+<div class="card"><h3>19. Add an item from the user</h3><p>Start with <code>t = (10, 20, 30)</code>.<br><b>Part A:</b> ask the user for a number, add it to the end of the tuple using <code>+</code>, and print the new tuple.<br><b>Part B:</b> start again from the original tuple and do the same using <code>list()</code>, <code>append()</code> and <code>tuple()</code>.</p><div class="lab">Sample output</div><pre class="out">Enter a number: 40
+(10, 20, 30, 40)
+Enter a number: 50
+(10, 20, 30, 50)</pre>
+<button class="sbtn" aria-expanded="false" aria-controls="s19">Show solution</button><pre class="sol" id="s19" hidden>t = (10, 20, 30)
+
+# Part A
+n = int(input(&quot;Enter a number: &quot;))
+t = t + (n,)
+print(t)
+
+# Part B
+t = (10, 20, 30)
+temp = list(t)
+n = int(input(&quot;Enter a number: &quot;))
+temp.append(n)
+t = tuple(temp)
+print(t)</pre>
+</div>
+<div class="card"><h3>20. Student record</h3><p>Ask the user for a name and marks in 3 subjects (numbers). Store all four values in a tuple named <code>record</code>. Print the record, the total marks and the average. Use indexing to get the marks from the tuple.</p><div class="lab">Sample output</div><pre class="out">Enter name: Riya
+Marks 1: 80
+Marks 2: 70
+Marks 3: 90
+(&#x27;Riya&#x27;, 80, 70, 90)
+Total: 240
+Average: 80.0</pre>
+<button class="sbtn" aria-expanded="false" aria-controls="s20">Show solution</button><pre class="sol" id="s20" hidden>name = input(&quot;Enter name: &quot;)
+m1 = int(input(&quot;Marks 1: &quot;))
+m2 = int(input(&quot;Marks 2: &quot;))
+m3 = int(input(&quot;Marks 3: &quot;))
+
+record = (name, m1, m2, m3)
+print(record)
+
+total = record[1] + record[2] + record[3]
+print(&quot;Total:&quot;, total)
+print(&quot;Average:&quot;, total / 3)</pre>
+</div>
+<script>
+const btns=[...document.querySelectorAll('.card .sbtn')];
+function setOne(b,open){const p=document.getElementById(b.getAttribute('aria-controls'));p.hidden=!open;b.setAttribute('aria-expanded',open);b.textContent=open?'Hide solution':'Show solution'}
+btns.forEach(b=>b.addEventListener('click',()=>setOne(b,b.getAttribute('aria-expanded')!=='true')));
+const all=document.getElementById('all');
+all.addEventListener('click',()=>{const open=all.getAttribute('aria-pressed')!=='true';all.setAttribute('aria-pressed',open);all.textContent=open?'Hide all solutions':'Show all solutions';btns.forEach(b=>setOne(b,open))});
+</script></body></html>
